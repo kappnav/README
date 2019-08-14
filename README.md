@@ -19,10 +19,10 @@ To install Kubernetes Application Navigator, perform these actions:
 
 # Uninstall
 
-To install Kubernetes Application Navigator, perform these actions: 
+To uninstall Kubernetes Application Navigator, perform these actions: 
 
-1. kubectl delete -f operator/kappnav-delete-CR.yaml --now
-1. kubectl delete -f operator/kappnav-delete.yaml 
+1. kubectl delete -f operator/kappnav-delete-CR.yaml --now -n kappnav
+1. kubectl delete -f operator/kappnav-delete.yaml -n kappnav
 1. kubectl delete namespace kappnav 
 
 # Install Validation
