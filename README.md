@@ -6,17 +6,11 @@ The Kubernetes Application Navigator uses the [Application Custom Resource Defin
 
 # Install
 
-To install Kubernetes Application Navigator using the default namespace (kappnav), perform these actions: 
+To install Kubernetes Application Navigator, perform these actions: 
 
 1. git clone https://github.com/kappnav/operator.git
 1. kubectl create namespace kappnav
 1. kubectl create -f operator/kappnav.yaml -n kappnav 
-
-To install kubernetes Application Navigator using an user specified namespace:
-
-1. git clone https://github.com/kappnav/operator.git
-1. kubectl create namespace my-namespace
-1. cat operator/kappnav.yaml | sed "s|namespace: kappnav|namespace: my-namespace|" | kubectl create -f - -n my-namespace
 
 # Install Samples
 
@@ -25,13 +19,19 @@ To install kubernetes Application Navigator using an user specified namespace:
 
 # Uninstall
 
-To uninstall Kubernetes Application Navigator using the default namespace (kappnav), perform these actions: 
+To uninstall Kubernetes Application Navigator, perform these actions: 
 
 1. kubectl delete -f operator/kappnav-delete-CR.yaml -n kappnav --now
 1. kubectl delete -f operator/kappnav-delete.yaml -n kappnav
 1. kubectl delete namespace kappnav 
 
-To uninstall Kubernetes Application Navigator using an user specified namespace, perform these actions: 
+# Install to user defined namespace
+
+1. git clone https://github.com/kappnav/operator.git
+1. kubectl create namespace my-namespace
+1. cat operator/kappnav.yaml | sed "s|namespace: kappnav|namespace: my-namespace|" | kubectl create -f - -n my-namespace
+
+# Uninstall from user defined namespace
 
 1. kubectl delete -f operator/kappnav-delete-CR.yaml -n my-namespace --now
 1. cat operator/kappnav-delete.yaml | sed "s|namespace: kappnav|namespace: my-namespace|" | kubectl delete -f - -n my-namespace
