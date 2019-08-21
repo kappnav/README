@@ -15,7 +15,7 @@ To install Kubernetes Application Navigator, perform these actions:
 # Install Samples
 
 1. git clone https://github.com/kappnav/samples.git
-1. kubectl create -f samples/stocktrader
+1. kubectl create -f samples/stocktrader -n default 
 
 # Uninstall
 
