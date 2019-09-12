@@ -11,13 +11,14 @@ To install, you need to pre-install the following:
 1. A Kubernetes cluster.  The kAppNav project has been verified on: 
    1. [Minishift](https://docs.okd.io/latest/minishift/getting-started/installing.html)
    1. [OKD](https://www.okd.io/) 
+   1. [Minikube]()
 1. [kubectl CLI](https://kubernetes.io/docs/tasks/tools/install-kubectl/)
 
 Avoid problems:  ensure your target Kubernetes is running and accessible to kubectl.  E.g. 'kubectl get nodes' should promptly return a response. 
 
 # Install
 
-To install Kubernetes Application Navigator, perform these actions: 
+To install Kubernetes Application Navigator (for minikube, see below), perform these actions: 
 
 1. git clone https://github.com/kappnav/operator.git
 1. kubectl create namespace kappnav
@@ -35,6 +36,18 @@ To uninstall Kubernetes Application Navigator, perform these actions:
 1. kubectl delete -f operator/kappnav-delete-CR.yaml -n kappnav --now
 1. kubectl delete -f operator/kappnav-delete.yaml -n kappnav
 1. kubectl delete namespace kappnav 
+
+# Install on Minikube
+
+1. git clone https://github.com/kappnav/operator.git
+1. kubectl create namespace kappnav
+1. cat operator/kappnav.yaml | sed "s|kubeEnv: okd|kubeEnv: minikube|" | kubectl create -f - -n kappnav
+
+Launch kAppNav UI with this command:
+
+```
+minikube service kappnav-ui-service -n kappnav --format "http://{{.IP}}:{{.Port}}/kappnav-ui"
+```
 
 # Install to user defined namespace
 
