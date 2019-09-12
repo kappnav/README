@@ -4,6 +4,17 @@ The Kubernetes Application Navigator is a tool that extends the Kubernetes conso
 
 The Kubernetes Application Navigator uses the [Application Custom Resource Definition (CRD)](https://github.com/kubernetes-sigs/application/blob/master/config/crds/app_v1beta1_application.yaml) from the [Kubernetes Application SIG](https://github.com/kubernetes-sigs/application) as the basis for describing applications.
 
+# Install Pre-reqs
+
+To install, you need to pre-install the following:
+
+1. A Kubernetes cluster.  The kAppNav project has been verified on: 
+   1. [Minishift](https://docs.okd.io/latest/minishift/getting-started/installing.html)
+   1. [OKD](https://www.okd.io/) 
+1. [kubectl CLI](https://kubernetes.io/docs/tasks/tools/install-kubectl/)
+
+Avoid problems:  ensure your target Kubernetes is running and accessible to kubectl.  E.g. 'kubectl get nodes' should promptly return a response. 
+
 # Install
 
 To install Kubernetes Application Navigator, perform these actions: 
