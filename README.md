@@ -29,7 +29,8 @@ To install Kubernetes Application Navigator (for minikube, see below), perform t
 # Install Samples
 
 1. git clone https://github.com/kappnav/samples.git
-1. kubectl create -f samples/stocktrader -n default 
+1. kubectl create namespace stocktrader
+1. kubectl create -f samples/stocktrader -n stocktrader
 
 # Uninstall
 
