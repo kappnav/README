@@ -116,14 +116,37 @@ Click on stocktrader application name to view the stock trader application compo
 
 ![image](https://github.com/kappnav/README/blob/master/images/components.png)
 
+The Kubernetes Application Navigator icon will apear in the OKD Service Catalog:
+
+![image](https://github.com/kappnav/README/blob/master/images/kappnav_in_okd_console.png)
+
 
 # Uninstall
 
 To uninstall Kubernetes Application Navigator, perform these actions: 
 
-1. kubectl delete -f operator/kappnav-delete-CR.yaml -n kappnav --now
-1. kubectl delete -f operator/kappnav-delete.yaml -n kappnav
-1. kubectl delete namespace kappnav 
+1. Delete the kAppNav components: `kubectl delete -f operator/kappnav-delete-CR.yaml -n kappnav --now`
+   * The application will be deleted:
+   ```
+   # kubectl delete -f operator/kappnav-delete-CR.yaml -n kappnav --now
+   kappnav.charts.helm.k8s.io "instance" deleted
+   ```
+1. Delete the Helm operator components: `kubectl delete -f operator/kappnav-delete.yaml -n kappnav`
+   * The Helm operator will be deleted:
+   ```
+   # kubectl delete -f operator/kappnav-delete.yaml -n kappnav
+   deployment.apps "helm-operator" deleted
+   clusterrolebinding.rbac.authorization.k8s.io "helm-operator" deleted
+   clusterrole.rbac.authorization.k8s.io "helm-operator" deleted
+   serviceaccount "helm-operator" deleted
+   customresourcedefinition.apiextensions.k8s.io "kappnavs.charts.helm.k8s.io" deleted
+   ```
+1. Finally, delete the kAppNav namespace: `kubectl delete namespace kappnav`
+   * The namespace will be deleted:
+   ```
+   # kubectl delete namespace kappnav 
+   namespace "kappnav" deleted
+   ```
 
 # Install on Minikube
 
