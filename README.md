@@ -106,19 +106,19 @@ To install Kubernetes Application Navigator (for minikube or a user-defined name
 
 After installing Kubernetes Application Navigator and the stock-trader sample, access the Kubernetes Application Navigator UI by finding and opening the UI route in the Openshift console: 
 
-![image](https://github.com/kappnav/README/blob/master/images/routes.png)
+![image](/images/routes.png?raw=true)
 
 The Kubernetes Application Navigator shows your installed applications:
 
-![image](https://github.com/kappnav/README/blob/master/images/applications.png)
+![image](/images/applications.png?raw=true)
 
 Click on stocktrader application name to view the stock trader application components: 
 
-![image](https://github.com/kappnav/README/blob/master/images/components.png)
+![image](/images/components.png?raw=true)
 
 The Kubernetes Application Navigator icon will apear in the OKD Service Catalog:
 
-![image](https://github.com/kappnav/README/blob/master/images/kappnav_in_okd_console.png)
+![image](/images/kappnav_in_okd_console.png?raw=true)
 
 
 # Uninstall
