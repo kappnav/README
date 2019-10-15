@@ -120,7 +120,7 @@ The Kubernetes Application Navigator icon will apear in the OKD Service Catalog:
 
 ![image](/images/kappnav_in_okd_console.png?raw=true)
 
-To add existing applications, or create a new application, follow the instructions for [How to Create Applications](how-to-annotate-deployed-application.md).
+To add existing applications, or create a new application, follow the instructions for [How to Create Applications](how-to-create-applications.md).
 
 # Uninstall
 
