@@ -25,6 +25,9 @@ The optional `kappnav.component.namespaces` annotation instructs kAppNav to appl
 
 The [music-service sample application](https://github.com/kappnav/samples/tree/master/music-service) implements this example scenario using the `solution: music-service` label to group all of the resources together.
 
+![image](/images/span-namespace-music-service.png?raw=true)
+
+The [application yaml](https://github.com/kappnav/samples/blob/master/music-service/music-service-app-cr.yaml):
 ```
 $ kubectl get application music-service -n music-service -o yaml
 apiVersion: app.k8s.io/v1beta1
