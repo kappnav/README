@@ -21,24 +21,32 @@ metadata:
     kappnav.component.namespaces: ui-namespace, api-namespace
 ```
 
-The `kappnav.component.namespaces` annotation instructs kAppNav to apply the application's label selector to namespaces 'ui-namespace' and 'api-namespace' in addition to the application's own namespace.
+The optional `kappnav.component.namespaces` annotation instructs kAppNav to apply the application's label selector to namespaces 'ui-namespace' and 'api-namespace' in addition to the application's own namespace.
 
-The annotation is optional.  If not specified, no additional namespaces are applied to the label selector - only the application's own namespace is used. 
+The [music-service sample application](https://github.com/kappnav/samples/tree/master/music-service) implements this example scenario using the `solution: music-service` label to group all of the resources together.
 
 ```
 $ kubectl get application music-service -n music-service -o yaml
 apiVersion: app.k8s.io/v1beta1
 kind: Application
 metadata:
+  name: music-service
   annotations:
     kappnav.component.namespaces: ui-namespace, api-namespace
-  name: music-service
-  namespace: music-service
+  labels:
+    app: music-service
+    solution: music-service
 spec:
-  componentKinds: [ ... ]
+  componentKinds:
+  - group: resources
+    kind: Pod
+  - group: resources
+    kind: Deployment
+  - group: resources
+    kind: Service
+  - group: resources
+    kind: Route
   selector:
-    matchExpressions:
-    - { ... }
-    matchLabels: { ... }
-
+    matchLabels:
+      solution: music-service
 ```
