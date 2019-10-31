@@ -8,4 +8,4 @@ Out of the box, kAppNav provides context-based linking into the Kubernetes manag
 
 * Deployment
   * View Replicas
-  [!]()
+  ![image](images/action-deployment-view-replicas.png?raw=true)
