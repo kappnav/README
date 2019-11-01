@@ -23,6 +23,7 @@ Avoid problems:  ensure your target Kubernetes is running and accessible to kube
 To install Kubernetes Application Navigator (for minikube or a user-defined namespace, see below), perform these actions:
 
 1. Clone the operator repository: `git clone https://github.com/kappnav/operator.git`
+1. kAppNav is configured for running on OKD v3.11, minishift, and minikube by default.  For OCP v4.2 edit operator/kappnav.yaml and replace `kubeEnv: okd` with `kubeEnv: ocp`
 1. Create the kAppNav namespace: `kubectl create namespace kappnav`
    * The namespace will be created:
    ```
