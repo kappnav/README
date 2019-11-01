@@ -20,7 +20,7 @@ Avoid problems:  ensure your target Kubernetes is running and accessible to kube
 
 # Install
 
-To install Kubernetes Application Navigator (for minikube or a user-defined namespace, see below), perform these actions:
+To install Kubernetes Application Navigator (for OCP v4.2, minikube or a user-defined namespace, see sections below), perform these actions:
 
 1. Clone the operator repository: `git clone https://github.com/kappnav/operator.git`
 1. Create the kAppNav namespace: `kubectl create namespace kappnav`
@@ -148,6 +148,11 @@ To uninstall Kubernetes Application Navigator, perform these actions:
    # kubectl delete namespace kappnav 
    namespace "kappnav" deleted
    ```
+
+# Install on OCP 4.2
+
+1. git clone https://github.com/kappnav/operator.git
+1. cat operator/kappnav.yaml | sed "s|kubeEnv: okd|kubeEnv: ocp|" | kubectl create -f - -n kappnav
 
 # Install on Minikube
 
