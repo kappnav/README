@@ -53,6 +53,7 @@ To install Kubernetes Application Navigator (for minikube or a user-defined name
    kappnav-init-pre-7fgcb               0/1       Completed   0          1m
    ```
 1. Ensure the routes are created: `kubectl get routes -n kappnav`
+   * IMPORTANT:  if installing to minikube (or another vanilla k8s) you must set kubeEnv=minikube.  See [Minikube instruction for details.]((https://kubernetes.io/docs/tasks/tools/install-minikube/))
    * Find the kappnav-ui-service route:
    ```
    # kubectl get routes -n kappnav
