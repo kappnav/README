@@ -18,7 +18,7 @@ To install, you need to pre-install the following:
 
 Avoid problems:  ensure your target Kubernetes is running and accessible to kubectl, e.g. `kubectl get nodes` should promptly return a response. 
 
-# Install
+# Install on OKD or Minishift
 
 To install Kubernetes Application Navigator (for minikube or a user-defined namespace, see below), perform these actions:
 
@@ -30,7 +30,7 @@ To install Kubernetes Application Navigator (for minikube or a user-defined name
    namespace/kappnav created
    ```
 1. Deploy the kAppNav operator: `kubectl create -f operator/kappnav.yaml -n kappnav`
-   * IMPORTANT:  if installing to minikube (or another vanilla k8s) you must set kubeEnv=minikube.  See [Minikube instruction for details.]((https://kubernetes.io/docs/tasks/tools/install-minikube/))
+   * IMPORTANT:  if installing to minikube (or another vanilla k8s) STOP.  Go to [Minikube instruction.](https://kubernetes.io/docs/tasks/tools/install-minikube/)
    * The operators will be created:
    ```
    # kubectl create -f operator/kappnav.yaml -n kappnav
