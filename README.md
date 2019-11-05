@@ -20,7 +20,7 @@ Avoid problems:  ensure your target Kubernetes is running and accessible to kube
 
 # Install 
 
-For instructions to install on Minikube see [Install on Minikube](https://github.com/kappnav/README/blob/master/README.md#install-on-minikube)
+For instructions to install on Minikube see [Install on Minikube.](https://github.com/kappnav/README/blob/master/README.md#install-on-minikube)
 
 To install Kubernetes Application Navigator into the kappnav namespace on OKD or Minishift perform these actions:
 
