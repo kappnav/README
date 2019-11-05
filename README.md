@@ -30,7 +30,7 @@ To install Kubernetes Application Navigator (for minikube or a user-defined name
    namespace/kappnav created
    ```
 1. Deploy the kAppNav operator: `kubectl create -f operator/kappnav.yaml -n kappnav`
-   * IMPORTANT:  if installing to minikube (or another vanilla k8s) STOP.  Go to [Minikube instruction.](https://kubernetes.io/docs/tasks/tools/install-minikube/)
+   * IMPORTANT:  if installing to minikube (or another vanilla k8s) STOP.  Go to [Minikube instructions.](https://kubernetes.io/docs/tasks/tools/install-minikube/)
    * The operators will be created:
    ```
    # kubectl create -f operator/kappnav.yaml -n kappnav
