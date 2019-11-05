@@ -24,6 +24,8 @@ For instructions to install on Minikube see [Install on Minikube.](https://githu
 
 To install Kubernetes Application Navigator into the kappnav namespace on OKD or Minishift perform these actions:
 
+Note: to install to a different namespace, see [Install to user defined namespace.](https://github.com/kappnav/README/blob/master/README.md#install-to-user-defined-namespace)
+
 1. Clone the operator repository: `git clone https://github.com/kappnav/operator.git`
 1. Create the kAppNav namespace: `kubectl create namespace kappnav`
    * The namespace will be created:
