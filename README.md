@@ -11,9 +11,9 @@ The Kubernetes Application Navigator uses the [Application Custom Resource Defin
 To install, you need to pre-install the following:
 
 1. A Kubernetes cluster.  The kAppNav project has been verified on: 
-   1. [Minishift](https://docs.okd.io/latest/minishift/getting-started/installing.html)
-   1. [OKD](https://www.okd.io/) 
-   1. [Minikube](https://kubernetes.io/docs/tasks/tools/install-minikube/)
+   1. [Minishift 3.11](https://docs.okd.io/latest/minishift/getting-started/installing.html)
+   1. [OKD 3.11](https://www.okd.io/) 
+   1. [Minikube 1.5, Kube 1.12.10](https://kubernetes.io/docs/tasks/tools/install-minikube/)
 1. [kubectl CLI](https://kubernetes.io/docs/tasks/tools/install-kubectl/)
 
 Avoid problems:  ensure your target Kubernetes is running and accessible to kubectl, e.g. `kubectl get nodes` should promptly return a response. 
