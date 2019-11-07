@@ -10,17 +10,20 @@ The Kubernetes Application Navigator uses the [Application Custom Resource Defin
 
 To install, you need to pre-install the following:
 
-1. A Kubernetes cluster.  The kAppNav project has been verified on:
-   1. [Minishift](https://docs.okd.io/latest/minishift/getting-started/installing.html)
-   1. [OKD](https://www.okd.io/)
+
+1. A Kubernetes cluster.  The kAppNav project has been verified on: 
+   1. [Minishift 3.11](https://docs.okd.io/latest/minishift/getting-started/installing.html)
+   1. [OKD 3.11](https://www.okd.io/) 
    1. [Minikube](https://kubernetes.io/docs/tasks/tools/install-minikube/)
 1. [kubectl CLI](https://kubernetes.io/docs/tasks/tools/install-kubectl/)
 
 Avoid problems:  ensure your target Kubernetes is running and accessible to kubectl, e.g. `kubectl get nodes` should promptly return a response.
 
-# Install
+# Install 
 
-To install Kubernetes Application Navigator (for OCP v4.2, minikube or a user-defined namespace, see sections below), perform these actions:
+
+To install Kubernetes Application Navigator into the kappnav namespace on OKD, perform the actions in the 
+following section. To install on OCP v4.2, minikube or a user-defined namespace, refer to the those sections. 
 
 1. Clone the operator repository: `git clone https://github.com/kappnav/operator.git`
 1. Create the kAppNav namespace: `kubectl create namespace kappnav`
@@ -30,6 +33,7 @@ To install Kubernetes Application Navigator (for OCP v4.2, minikube or a user-de
    namespace/kappnav created
    ```
 1. Deploy the kAppNav operator: `kubectl create -f operator/kappnav.yaml -n kappnav`
+
    * The operators will be created:
    ```
    # kubectl create -f operator/kappnav.yaml -n kappnav
@@ -122,7 +126,7 @@ The Kubernetes Application Navigator icon will apear in the OKD Service Catalog:
 
 To add existing applications, or create a new application, follow the instructions for [How to Create Applications](how-to-create-applications.md).
 
-# Uninstall
+## Uninstall
 
 To uninstall Kubernetes Application Navigator, perform these actions:
 
