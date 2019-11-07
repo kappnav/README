@@ -1,6 +1,16 @@
-# Installing Kubernetes Application Navigator
+# What is Kubernetes Application Navigator?
 
 The Kubernetes Application Navigator is a tool that extends the Kubernetes console to provide the visualization, inspection, understanding, and navigation of the deployed resources that comprise an application.
+
+# What is an Application?
+
+An application consists of one (or usually more) custom-written program components together with the supporting infrastructure, application middleware, middleware services (such as databases, queueing software, integration software and other aspects) and other components that make up a complete solution.
+The Kubernetes Application Navigator is a tool that extends the Kubernetes console to provide the visualization, inspection, understanding, and navigation of the deployed resources that comprise an application.
+
+The Kubernetes Application Navigator uses the [Application Custom Resource Definition (CRD)](https://github.com/kubernetes-sigs/application/blob/master/config/crds/app_v1beta1_application.yaml) from the [Kubernetes Application SIG](https://github.com/kubernetes-sigs/application) as the basis for describing applications.
+
+# Installing Kubernetes Application Navigator
+
 
 # Prerequisites
 
@@ -14,6 +24,7 @@ The Kubernetes Application Navigator is a tool that extends the Kubernetes conso
 
 # Install Kubernetes Application Navigator
 
+
 1. Clone the operator repository with the following command: `git clone https://github.com/kappnav/operator.git`
 1. Create the kAppNav namespace with the following command: `kubectl create namespace kappnav`
 
@@ -21,6 +32,7 @@ The Kubernetes Application Navigator is a tool that extends the Kubernetes conso
    # kubectl create namespace kappnav
    namespace/kappnav created
    ```
+
 1. Deploy the kAppNav operator with the following command: `kubectl create -f operator/kappnav.yaml -n kappnav`
 
    ```
@@ -114,8 +126,8 @@ The Kubernetes Application Navigator icon appears in the OKD Service Catalog:
 
 To add existing applications, or create a new application, follow the instructions for [How to Create Applications](how-to-create-applications.md).
 
-# Uninstall Kubernetes Application Navigator
 
+# Uninstall Kubernetes Application Navigator
 
 
 1. Delete the kAppNav components with the following command: `kubectl delete -f operator/kappnav-delete-CR.yaml -n kappnav --now`
