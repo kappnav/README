@@ -22,10 +22,10 @@ The Kubernetes Application Navigator uses the [Application Custom Resource Defin
 
 Install choices: 
 
-1. OKD or minishift into kappnav namespace
-1. OCP v4.2
-1. minikube 
-1. OKD or minishift into user-defined namespace
+1. [OKD or minishift into kappnav namespace](https://github.com/kappnav/README#install-on-okd-or-minishift-into-kappnav-namespace)
+1. [OCP v4.2](https://github.com/kappnav/README#install-on-ocp-42)
+1. [minikube](https://github.com/kappnav/README#install-on-minikube) 
+1. [OKD or minishift into user-defined namespace](https://github.com/kappnav/README#install-on-okd-or-minishift-into-user-defined-namespace)
 
 ## Install on OKD or minishift into kappnav namespace
 
