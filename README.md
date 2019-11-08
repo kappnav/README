@@ -173,9 +173,9 @@ To add existing applications, or create a new application, follow the instructio
 
    2. Start the Kubernetes Application Navigator UI with the following command:
    
-   ```
-   minikube service kappnav-ui-service -n kappnav --format "http://{{.IP}}:{{.Port}}/kappnav-ui"
-   ```
+      ```
+      minikube service kappnav-ui-service -n kappnav --format "http://{{.IP}}:{{.Port}}/kappnav-ui"
+      ```
 
 
 ## Install on OKD or minishift into user defined namespace
