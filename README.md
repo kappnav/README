@@ -50,7 +50,7 @@ Install choices:
    kappnav.charts.helm.k8s.io/instance created
    ```
 1. Use the following command to ensure that all the pods are running: `kubectl get pods -n kappnav`
-   * It might take a couple minutes for all of the pods to be created
+   * It might take a couple of minutes for all of the pods to be created
 
    ```
    # kubectl get pods -n kappnav
@@ -159,9 +159,9 @@ To add existing applications, or create a new application, follow the instructio
 
 ## Install on OCP 4.2
 
-1. git clone https://github.com/kappnav/operator.git
-1. kubectl create namespace kappnav
-1. cat operator/kappnav.yaml | sed "s|kubeEnv: okd|kubeEnv: ocp|" | kubectl create -f - -n kappnav
+1. `git clone https://github.com/kappnav/operator.git`
+1. `kubectl create namespace kappnav`
+1. `cat operator/kappnav.yaml | sed "s|kubeEnv: okd|kubeEnv: ocp|" | kubectl create -f - -n kappnav`
 
 ## Install on Minikube
 
@@ -177,12 +177,12 @@ minikube service kappnav-ui-service -n kappnav --format "http://{{.IP}}:{{.Port}
 
 ## Install on OKD or minishift into user defined namespace
 
-1. git clone https://github.com/kappnav/operator.git
-1. kubectl create namespace my-namespace
-1. cat operator/kappnav.yaml | sed "s|namespace: kappnav|namespace: my-namespace|" | kubectl create -f - -n my-namespace
+   1. `git clone https://github.com/kappnav/operator.git`
+   2. `kubectl create namespace my-namespace`
+   3. `cat operator/kappnav.yaml | sed "s|namespace: kappnav|namespace: my-namespace|" | kubectl create -f - -n my-namespace`
 
 ## Uninstall from user defined namespace
 
-1. kubectl delete -f operator/kappnav-delete-CR.yaml -n my-namespace --now
-1. cat operator/kappnav-delete.yaml | sed "s|namespace: kappnav|namespace: my-namespace|" | kubectl delete -f - -n my-namespace
-1. kubectl delete namespace my-namespace
+   1. `kubectl delete -f operator/kappnav-delete-CR.yaml -n my-namespace --now`
+   2. `cat operator/kappnav-delete.yaml | sed "s|namespace: kappnav|namespace: my-namespace|" | kubectl delete -f - -n my-namespace`
+   3. `kubectl delete namespace my-namespace`
