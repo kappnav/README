@@ -1,8 +1,8 @@
-# Using Actions in kAppNav
+# Using actions in Kubernetes Application Navigator
 
-Kubernetes Application Navigator (kAppNav) provides a set of default, context-based actions for Kubernetes resources as well as some runtimes within the managed containers.
+Kubernetes Application Navigator provides a set of default, context-based actions for Kubernetes resources and some runtimes within the managed containers.
 
-Out of the box, kAppNav provides context-based linking into the Kubernetes management console (Vanilla Kubernetes or OpenShift Cluster Console), as well as links into dashboards provided by Prometheus and Grafana (if those tools are installed).
+ Kubernetes Application Navigator also provides context-based linking into the Kubernetes management console and links into dashboards that are provided by Prometheus and Grafana if those tools are installed.
 
 ## Actions by Type
 

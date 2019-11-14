@@ -20,14 +20,14 @@ The Kubernetes Application Navigator uses the [Application Custom Resource Defin
 
 > **Avoid trouble**: Ensure that your target Kubernetes cluster is running and accessible to the Kubernetes command-line tool (kubectl). Run the `kubectl get nodes` command to return a response that indicates that Kubernetes is running.
 
-Install choices: 
+You can install Kuberenetes Application Navigator by using one of the following methods: 
 
 1. [OKD or minishift into kappnav namespace](https://github.com/kappnav/README#install-on-okd-or-minishift-into-kappnav-namespace)
 1. [OCP v4.2](https://github.com/kappnav/README#install-on-ocp-42)
 1. [minikube](https://github.com/kappnav/README#install-on-minikube) 
 1. [OKD or minishift into user-defined namespace](https://github.com/kappnav/README#install-on-okd-or-minishift-into-user-defined-namespace)
 
-## Install on OKD or minishift into kappnav namespace
+## Install Kubernetes Application Navigator on OKD or minishift into a Kubernetes Application Navigator namespace
 
 
 1. Clone the operator repository with the following command: `git clone https://github.com/kappnav/operator.git`
@@ -72,7 +72,7 @@ Install choices:
    2. Access the kAppNav UI with the following URL: `http://kappnav-ui-service-kappnav.apps.myhost.com/kappnav-ui`
 
 
-## Install the Sample Application
+## Install the Sample application
 
 1. Clone the sample repository with the following command: `git clone https://github.com/kappnav/samples.git`
 1. Create the `stocktrader` sample namespace with the following command: `kubectl create namespace stocktrader`
@@ -159,7 +159,7 @@ To add existing applications, or create a new application, follow the instructio
 
 
 ## Install Kubernetes Application Navigator on OCP 4.2
-   Use the following commands to install Kubernetes Application Navigator on Minikube:
+   Use the following commands to install Kubernetes Application Navigator on OCP 4.2:
    1. `git clone https://github.com/kappnav/operator.git`
    1. `kubectl create namespace kappnav`
    1. `cat operator/kappnav.yaml | sed "s|kubeEnv: okd|kubeEnv: ocp|" | kubectl create -f - -n kappnav`
@@ -178,14 +178,14 @@ To add existing applications, or create a new application, follow the instructio
       ```
 
 
-## Install on OKD or minishift into user defined namespace
-
+## Installing Kubernetes Application Navigator on OKD or Minishift into a user-defined namespace
+  Use the following commands to install Kubernetes Application Navigator on OKD or minishft into a user-defined namespace
    1. `git clone https://github.com/kappnav/operator.git`
    2. `kubectl create namespace my-namespace`
    3. `cat operator/kappnav.yaml | sed "s|namespace: kappnav|namespace: my-namespace|" | kubectl create -f - -n my-namespace`
 
-## Uninstall from user defined namespace
-
+## Uninstall Kubernetes Application Navigator from a user-defined namespace
+ Use the following commands to install Kubernetes Application Navigator from a user-defined namespace: 
    1. `kubectl delete -f operator/kappnav-delete-CR.yaml -n my-namespace --now`
    2. `cat operator/kappnav-delete.yaml | sed "s|namespace: kappnav|namespace: my-namespace|" | kubectl delete -f - -n my-namespace`
    3. `kubectl delete namespace my-namespace`
