@@ -8,4 +8,4 @@ kAppNav includes pre-built a prebuilt action to open this dashboard view for the
 The following screenshot shows how to access and launch the Kibana log view for a Liberty deployment.  Note this dashboard is
 designed to show logs for all pods belonging to the same Liberty Deployment resource.
 
-![kibana]()
+![kibana](images/view-kibana-action.png)
