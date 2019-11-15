@@ -2,9 +2,9 @@
 
 Kubernetes Application Navigator creates applications and reflects the set of underlying Kubernetes resources that an application uses. You can also use Kubernetes Application Navigator to compose an application that includes other applications.
 
-Composing an application that includes other applications has a few benefits:
-1. The application can reflect the logical, organizational, or business unit structure of a set of applications that are tightly coupled or collaborate to perform work.
-1. The application provides a single, combined status that reflects the status of all included applications and resources. If there is an issue with any included application or resource, the application's status reflects that for easy monitoring.
+When you compose an application that includes other applications, there are a few benefits:
+* The application can reflect the logical, organizational, or business unit structure of a set of applications that are tightly coupled or collaborate to perform work.
+* The application provides a single, combined status that reflects the status of all included applications and resources. If there is an issue with any included application or resource, the application's status reflects that issue for easy monitoring.
 
 # Prerequisites
 
@@ -14,11 +14,11 @@ Composing an application that includes other applications has a few benefits:
 
 # Before you begin
 
-Kubernetes Application Navigator uses the flexible labeling system of Kubernetes and the [Application CRD](https://github.com/kubernetes-sigs/application/blob/master/config/crds/app_v1beta1_application.yaml) to group various elements together into a logical application view. The various elements can include Kubernetes resources (such as Pods) but the elements can also include other applications. The grouping is represented by an Application Custom Resource and a set of label selectors. You can compose applications by using either autonomous membership or directed membership.
+Kubernetes Application Navigator uses the flexible labeling system of Kubernetes and the [Application CRD](https://github.com/kubernetes-sigs/application/blob/master/config/crds/app_v1beta1_application.yaml) to group various elements together into a logical application view. The various elements can include Kubernetes resources but the elements can also include other applications. The grouping is represented by an Application Custom Resource and a set of label selectors. You can compose applications by using either autonomous membership or directed membership.
 
 # Quick setup
 
-To demonstrate how to compose applications, you can use two applications in the same namespace that follow the Backend for Frontend (BFF) pattern. This pattern is composed of two separate applications that include the front-end application and the backend application. Both of these applications collaborate to provide the application experience and are often developed and owned by the same team.
+To demonstrate how to compose applications, you can use two applications in the same namespace that follow the Backend for Frontend (BFF) pattern. This pattern is composed of two separate applications that include the front-end application and the back-end application. Both of these applications collaborate to provide the application experience and are often developed and owned by the same team.
 
 You can use two applications that do not implement the BFF pattern to simulate the process of composing applications. You can reuse the `my-node-project` namespace that was used when you [created applications in Kubernetes Application Navigator](/how-to-create-applications.md) and add an application to it. When you compose two applications, the `my-node-app` application can be used as the front-end application, and you can add a new back-end application.
 
@@ -61,7 +61,7 @@ You can use two applications that do not implement the BFF pattern to simulate t
    application.app.k8s.io/my-node-mongo-ap created
    ```
 
-1. Navigate to the Kubernetes Application Navigator UI to see both the **my-node-app** applications and the **my-node-mongo-app** application.
+1. Navigate to the Kubernetes Application Navigator user interface to see both the **my-node-app** applications and the **my-node-mongo-app** application.
 ![image](/images/manual-compose-kappnav-node-mongo-created.png?raw=true)
 
 1. You can now see the BFF pattern that displays the **my-node-app** application as the front-end application and the **my-node-mongo-app** application as the back-end application.
@@ -70,7 +70,7 @@ You can use two applications that do not implement the BFF pattern to simulate t
 
 Before you can compose an application that includes the `my-node-app` application and the `my-node-mongo-app` application, the applications need to be properly labeled. Because the Application CRD works based on label selectors, the Application Custom Resources also need to be labeled. You need to update the `my-node-app` application to include the `app: my-node-mongo-app` and `solution: my-node-bff` labels to match the labels that are included in the `my-node-mongo-app-cr.yaml` file.
 
-1. Navigate to the Kubernetes Application Navigator UI and click **my-node-app**.
+1. Navigate to the Kubernetes Application Navigator user interface and click **my-node-app**.
    * Click **Edit**.
 ![image](/images/manual-compose-kappnav-edit-my-node-app.png?raw=true)
 
@@ -95,7 +95,7 @@ The `my-node-app` and `my-node-mongo-app` applications now have a defined **app*
 The autonomous membership model enables the [stock-trader sample](https://github.com/kappnav/samples/tree/master/stocktrader). In the autonomous membership model, individual components are chosen to comprise an application by defining a consistent label throughout the application. You can use the autonomous membership model to provide the flexibility to add future components to the application by adding the `solution: my-node-bff` label.
 
 
-1. Open the Kubernetes Application Navigator UI and create a new application that is named **my-node-bff** in the **my-node-project** namespace.
+1. Open the Kubernetes Application Navigator user interface and create a new application that is named **my-node-bff** in the **my-node-project** namespace.
 ![image](/images/manual-compose-kappnav-create-general.png?raw=true)
 
 1. On the **Selectors** tab, specify the 'solution' label and the 'my-node-bff' value that was defined for both applications.
@@ -132,7 +132,7 @@ spec:
 You can use the directed membership model to gain more control over the components of the application by selecting only the components that you want to include.
 
 
-1. Open the Kubernetes Application Navigator UI and create a new application that is named **my-node-bff-directed** in the **my-node-project** namespace.
+1. Open the Kubernetes Application Navigator user interface and create a new application that is named **my-node-bff-directed** in the **my-node-project** namespace.
 ![image](/images/manual-compose-kappnav-create-directed-general.png?raw=true)
 
 1. On the **Selectors** tab, specify the following match expression: `{key: app, operator: In, values: [my-node-app,my-node-mongo-app]}`.
