@@ -1,11 +1,11 @@
-# Viewing Logs for Liberty Deployments
+# Viewing logs for Liberty deployments
 
 The OpenLiberty operator provides a dashboard for viewing log data with Kibana.
-kAppNav includes pre-built a prebuilt action to open this dashboard view for the selected Liberty Deployment resource.  
+Kubernetes Application Navigator includes a pre-built action to open this dashboard view for the selected Liberty deployment resource.  
 
-## View Logs with Kibana 
+## View logs with Kibana 
 
-The following screenshot shows how to access and launch the Kibana log view for a Liberty deployment.  Note this dashboard is
-designed to show logs for all pods belonging to the same Liberty Deployment resource.
+The following screen capture shows you how to access and start the Kibana log view for a Liberty deployment. The dashboard is
+designed to show logs for all the pods that belong to the same Liberty deployment resource.
 
 ![kibana](images/view-kibana-action.png)
