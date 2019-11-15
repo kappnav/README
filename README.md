@@ -27,7 +27,7 @@ You can install Kuberenetes Application Navigator by using one of the following 
 1. [minikube](https://github.com/kappnav/README#install-on-minikube) 
 1. [OKD or minishift into user-defined namespace](https://github.com/kappnav/README#install-on-okd-or-minishift-into-user-defined-namespace)
 
-## Install Kubernetes Application Navigator on OKD or minishift into a Kubernetes Application Navigator namespace
+## Install Kubernetes Application Navigator on OKD or minishift into a kappnav namespace
 
 
 1. Clone the operator repository with the following command: `git clone https://github.com/kappnav/operator.git`
