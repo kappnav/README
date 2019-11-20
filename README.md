@@ -166,6 +166,13 @@ To add existing applications, or create a new application, follow the instructio
 
 
 ## Install Kubernetes Application Navigator on Minikube
+
+**NOTE** kAppNav presently works only on Kubernetes versions < 1.16 !  Also, at least 4GB memory is recommended.  We have verified kAppNav on minikube, using the following startup:
+
+```
+minikube start --kubernetes-version=1.14.9 --vm-driver=virtualbox --memory=4000mb
+```
+
    1. Use the following commands to install Kubernetes Application Navigator on Minikube:
       1. `git clone https://github.com/kappnav/operator.git`
       2. `kubectl create namespace kappnav`
