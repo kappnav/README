@@ -39,7 +39,7 @@ You can install Kuberenetes Application Navigator by using one of the following 
 1. Deploy the kAppNav operator with the following command: `curl -L https://raw.githubusercontent.com/kappnav/operator/master/releases/0.1.2/kappnav.yaml | kubectl -f - -n kappnav`
 
    ```
-   # kubectl create -f operator/kappnav.yaml -n kappnav
+   # curl -L https://raw.githubusercontent.com/kappnav/operator/master/releases/0.1.2/kappnav.yaml | kubectl -f - -n kappnav
    customresourcedefinition.apiextensions.k8s.io/kappnavs.charts.helm.k8s.io created
    serviceaccount/helm-operator created
    clusterrole.rbac.authorization.k8s.io/helm-operator created
