@@ -29,8 +29,6 @@ You can install Kuberenetes Application Navigator by using one of the following 
 
 ## Install Kubernetes Application Navigator on OKD or minishift into a kappnav namespace
 
-
-1. Clone the operator repository with the following command: `git clone https://github.com/kappnav/operator.git`
 1. Create the kAppNav namespace with the following command: `kubectl create namespace kappnav`
 
    ```
@@ -38,7 +36,7 @@ You can install Kuberenetes Application Navigator by using one of the following 
    namespace/kappnav created
    ```
 
-1. Deploy the kAppNav operator with the following command: `$(build/version.sh) | cat operator/kappnav.yaml | sed "s|KAPPNAV_VERSION|$VERSION|" | kubectl create -f - -n kappnav`
+1. Deploy the kAppNav operator with the following command: `curl -L https://raw.githubusercontent.com/kappnav/operator/master/releases/0.1.2/kappnav.yaml | kubectl -f - -n kappnav`
 
    ```
    # kubectl create -f operator/kappnav.yaml -n kappnav
