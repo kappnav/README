@@ -36,7 +36,7 @@ You can install Kuberenetes Application Navigator by using one of the following 
    namespace/kappnav created
    ```
 
-1. Deploy the kAppNav operator with the following command: `curl -L https://raw.githubusercontent.com/kappnav/operator/master/releases/0.1.2/kappnav.yaml | kubectl -f - -n kappnav`
+1. Deploy the kAppNav operator with the following command: `curl -L https://raw.githubusercontent.com/kappnav/operator/master/releases/latest/kappnav.yaml | kubectl -f - -n kappnav`
 
    ```
    # curl -L https://raw.githubusercontent.com/kappnav/operator/master/releases/0.1.2/kappnav.yaml | kubectl -f - -n kappnav
@@ -132,16 +132,16 @@ To add existing applications, or create a new application, follow the instructio
 
 ## Uninstall Kubernetes Application Navigator
 
-1. Delete the kAppNav components with the following command: `kubectl delete -f operator/kappnav-delete-CR.yaml -n kappnav --now`
+1. Delete the kAppNav components with the following command: `curl -L https://raw.githubusercontent.com/kappnav/operator/master/releases/latest/kappnav-delete-CR.yaml | kubectl create -f - -n kappnav --now`
 
    ```
-   # kubectl delete -f operator/kappnav-delete-CR.yaml -n kappnav --now
+   # curl -L https://raw.githubusercontent.com/kappnav/operator/master/releases/latest/kappnav-delete-CR.yaml | kubectl create -f - -n kappnav --now
    kappnav.charts.helm.k8s.io "instance" deleted
    ```
-1. Delete the Helm operator components with the following command: `kubectl delete -f operator/kappnav-delete.yaml -n kappnav`
+1. Delete the operator components with the following command: `curl -L https://raw.githubusercontent.com/kappnav/operator/master/releases/latest/kappnav-delete.yaml | kubectl delete -f - -n kappnav`
 
    ```
-   # kubectl delete -f operator/kappnav-delete.yaml -n kappnav
+   # curl -L https://raw.githubusercontent.com/kappnav/operator/master/releases/latest/kappnav-delete.yaml | kubectl delete -f - -n kappnav
    deployment.apps "helm-operator" deleted
    clusterrolebinding.rbac.authorization.k8s.io "helm-operator" deleted
    clusterrole.rbac.authorization.k8s.io "helm-operator" deleted
@@ -158,10 +158,8 @@ To add existing applications, or create a new application, follow the instructio
 
 ## Install Kubernetes Application Navigator on OCP 4.2
    Use the following commands to install Kubernetes Application Navigator on OCP 4.2:
-   1. `git clone https://github.com/kappnav/operator.git`
    1. `kubectl create namespace kappnav`
-   1. `$(build/version.sh) | cat operator/kappnav.yaml | sed "s|KAPPNAV_VERSION|$VERSION|" | sed "s|kubeEnv: okd|kubeEnv: ocp|" | kubectl create -f - -n kappnav`
-
+   1. `curl -L https://raw.githubusercontent.com/kappnav/operator/master/releases/latest/kappnav.yaml | sed "s|kubeEnv: okd|kubeEnv: ocp|" | kubectl create -f - -n kappnav`
 
 ## Install Kubernetes Application Navigator on Minikube
 
@@ -172,9 +170,8 @@ minikube start --kubernetes-version=1.14.9 --vm-driver=virtualbox --memory=4000m
 ```
 
    1. Use the following commands to install Kubernetes Application Navigator on Minikube:
-      1. `git clone https://github.com/kappnav/operator.git`
-      2. `kubectl create namespace kappnav`
-      3. `$(build/version.sh) | cat operator/kappnav.yaml | sed "s|KAPPNAV_VERSION|$VERSION|" | sed "s|kubeEnv: okd|kubeEnv: minikube|" | kubectl create -f - -n kappnav`
+      1. `kubectl create namespace kappnav`
+      2. `curl -L https://raw.githubusercontent.com/kappnav/operator/master/releases/latest/kappnav.yaml | sed "s|kubeEnv: okd|kubeEnv: minikube|" | kubectl create -f - -n kappnav`
 
    2. Start the Kubernetes Application Navigator UI with the following command:
    
@@ -185,13 +182,11 @@ minikube start --kubernetes-version=1.14.9 --vm-driver=virtualbox --memory=4000m
 
 ## Installing Kubernetes Application Navigator on OKD or Minishift into a user-defined namespace
   Use the following commands to install Kubernetes Application Navigator on OKD or minishft into a user-defined namespace
-   1. `git clone https://github.com/kappnav/operator.git`
-   2. `kubectl create namespace my-namespace`
-   3. `$(build/version.sh) | cat operator/kappnav.yaml | sed "s|KAPPNAV_VERSION|$VERSION|" | sed "s|namespace: kappnav|namespace: my-namespace|" | kubectl create -f - -n my-namespace`
+   1. `kubectl create namespace my-namespace`
+   2. `curl -L https://raw.githubusercontent.com/kappnav/operator/master/releases/latest/kappnav.yaml | sed "s|namespace: kappnav|namespace: my-namespace|" | kubectl create -f - -n my-namespace`
 
 ## Uninstall Kubernetes Application Navigator from a user-defined namespace
  Use the following commands to install Kubernetes Application Navigator from a user-defined namespace: 
-   1. `kubectl delete -f operator/kappnav-delete-CR.yaml -n my-namespace --now`
-   2. `$(build/version.sh) | cat operator/kappnav.yaml | sed "s|KAPPNAV_VERSION|$VERSION|" | sed "s|namespace: kappnav|namespace: my-namespace|" | kubectl delete -f - -n my-namespace`
+   1. `curl -L https://raw.githubusercontent.com/kappnav/operator/master/releases/latest/kappnav-delete-CR.yaml | kubectl create -f - -n my-namespace --now`
+   2. `curl -L https://raw.githubusercontent.com/kappnav/operator/master/releases/latest/kappnav-delete.yaml | sed "s|namespace: kappnav|namespace: my-namespace|" | kubectl delete -f - -n my-namespace`
    3. `kubectl delete namespace my-namespace`
-
