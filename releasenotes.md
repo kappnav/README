@@ -1,5 +1,13 @@
 # Release Notes 
 
+## Version 0.1.4 
+
+Same platforms as 0.1.2.  New function is conversation from Helm operator to native operator, using operator SDK. 
+
+## Version 0.1.3 
+
+No 0.1.3 release.
+
 ## Version 0.1.2 
 
 Supported platforms
