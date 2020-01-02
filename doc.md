@@ -1,5 +1,7 @@
 # {k}AppNav Usage Documentation
 
+Current Version:  0.1.4
+
 Table of Contents
 
 1. [What is?](https://github.com/kappnav/README#what-is-kubernetes-application-navigator)
