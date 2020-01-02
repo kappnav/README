@@ -4,6 +4,8 @@
 
 Same platforms as 0.1.2.  New function is conversation from Helm operator to native operator, using operator SDK. 
 
+Note: there is no upgrade from 0.1.2 to 0.1.4.  You must uninstall 0.1.2 before installing 0.1.4. 
+
 ## Version 0.1.3 
 
 No 0.1.3 release.
