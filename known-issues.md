@@ -1,5 +1,13 @@
 # Known Issues
 
+## Release 0.1.4 
+
+No known issues.
+
+## Release 0.1.3 
+
+No 0.1.3 release. 
+
 ## Release 0.1.2 
 
 Uninstall sometimes hangs due to operator finalizer.  Solution is to delete the finalizer from the kappnav custom resource.
