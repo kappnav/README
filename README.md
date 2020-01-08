@@ -38,7 +38,7 @@ You can install Kuberenetes Application Navigator by using one of the following 
    namespace/kappnav created
    ```
 
-1. Deploy the kAppNav operator with the following command: `curl -L https://raw.githubusercontent.com/kappnav/operator/master/releases/latest/kappnav.yaml | kubectl -f - -n kappnav`
+1. Deploy the kAppNav operator with the following command: `curl -L https://raw.githubusercontent.com/kappnav/operator/master/releases/latest/kappnav.yaml | kubectl create -f - -n kappnav`
 
    ```
    # curl -L https://raw.githubusercontent.com/kappnav/operator/master/releases/0.1.2/kappnav.yaml | kubectl -f - -n kappnav
@@ -57,7 +57,7 @@ You can install Kuberenetes Application Navigator by using one of the following 
    NAME                                 READY     STATUS      RESTARTS   AGE
    helm-operator-6bf5fb5b68-hvtbf       1/1       Running     0          2m
    kappnav-controller-c6bdfdf59-mv2wh   2/2       Running     0          1m
-   kappnav-f5578677f-6r9js              2/2       Running     0          1m
+   kappnav-ui-f5578677f-6r9js           3/3       Running     0          1m
    kappnav-init-post-49nt8              0/1       Completed   0          1m
    kappnav-init-pre-7fgcb               0/1       Completed   0          1m
    ```
@@ -66,8 +66,7 @@ You can install Kuberenetes Application Navigator by using one of the following 
    ```
    # kubectl get routes -n kappnav
    NAME                  HOST/PORT                                           PATH          SERVICES             PORT      TERMINATION          WILDCARD
-   kappnav-api-service   kappnav-ui-service-kappnav.apps.myhost.com   /kappnav      kappnav-ui-service   <all>     reencrypt/Redirect   None
-   kappnav-ui-service    kappnav-ui-service-kappnav.apps.myhost.com   /kappnav-ui   kappnav-ui-service   <all>     reencrypt/Redirect   None
+   kappnav-ui-service    kappnav-ui-service-kappnav.apps.myhost.com                        kappnav-ui-service   <all>     reencrypt            None
    ```
    2. Access the kAppNav UI with the following URL: `http://kappnav-ui-service-kappnav.apps.myhost.com/kappnav-ui`
 
@@ -134,7 +133,7 @@ To add existing applications, or create a new application, follow the instructio
 
 ## Uninstall Kubernetes Application Navigator
 
-1. Delete the kAppNav components with the following command: `curl -L https://raw.githubusercontent.com/kappnav/operator/master/releases/latest/kappnav-delete-CR.yaml | kubectl create -f - -n kappnav --now`
+1. Delete the kAppNav components with the following command: `curl -L https://raw.githubusercontent.com/kappnav/operator/master/releases/latest/kappnav-delete-CR.yaml | kubectl delete -f - -n kappnav --now`
 
    ```
    # curl -L https://raw.githubusercontent.com/kappnav/operator/master/releases/latest/kappnav-delete-CR.yaml | kubectl create -f - -n kappnav --now
@@ -189,6 +188,6 @@ minikube start --kubernetes-version=1.14.9 --vm-driver=virtualbox --memory=4000m
 
 ## Uninstall Kubernetes Application Navigator from a user-defined namespace
  Use the following commands to install Kubernetes Application Navigator from a user-defined namespace: 
-   1. `curl -L https://raw.githubusercontent.com/kappnav/operator/master/releases/latest/kappnav-delete-CR.yaml | kubectl create -f - -n my-namespace --now`
+   1. `curl -L https://raw.githubusercontent.com/kappnav/operator/master/releases/latest/kappnav-delete-CR.yaml | kubectl delete -f - -n my-namespace --now`
    2. `curl -L https://raw.githubusercontent.com/kappnav/operator/master/releases/latest/kappnav-delete.yaml | sed "s|namespace: kappnav|namespace: my-namespace|" | kubectl delete -f - -n my-namespace`
    3. `kubectl delete namespace my-namespace`
