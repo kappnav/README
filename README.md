@@ -8,7 +8,7 @@ The Kubernetes Application Navigator is a tool that extends the Kubernetes conso
 
 An application consists of custom-written program components that combine with the supporting infrastructure, application middleware, middleware services, and other components to define a complete solution.
 
-The Kubernetes Application Navigator uses the [Application Custom Resource Definition (CRD)](https://github.com/kubernetes-sigs/application/blob/master/config/crds/app.k8s.io_applications.yaml) from the [Kubernetes Application SIG](https://github.com/kubernetes-sigs/application) as the basis for describing applications.
+The Kubernetes Application Navigator uses the [Application Custom Resource Definition (CRD)](https://raw.githubusercontent.com/kubernetes-sigs/application/master/config/crd/bases/app.k8s.io_applications.yaml) from the [Kubernetes Application SIG](https://github.com/kubernetes-sigs/application) as the basis for describing applications.
 
 # Installing Kubernetes Application Navigator
 
