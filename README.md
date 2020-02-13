@@ -1,4 +1,4 @@
-# [Documentation](https://github.com/kappnav/README/blob/master/doc.md)
+# Documentation [Here](https://github.com/kappnav/README/blob/master/doc.md)
 
 # What is Kubernetes Application Navigator?
 
