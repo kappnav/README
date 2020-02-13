@@ -1,5 +1,9 @@
 # Known Issues
 
+## Release 0.5.0
+
+No known issues.
+
 ## Release 0.1.4 
 
 No known issues.
