@@ -1,6 +1,6 @@
 # {k}AppNav Usage Documentation
 
-Current Version:  0.1.4
+Current Version:  0.5.0
 
 Table of Contents
 
