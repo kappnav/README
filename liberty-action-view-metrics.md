@@ -25,7 +25,6 @@ To enable this capability, three things are required:
    metadata: 
       labels: 
          kappnav.action.metrics.{mpxx}: true
-         kappnav.action.metrics.{mpxx}: true
       annotations: 
          kappnav.subkind: Liberty 
    ```
