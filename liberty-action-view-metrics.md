@@ -34,6 +34,4 @@ To enable this capability, three things are required:
 
    In the {k}AppNav UI, it appears like this: 
 
-   ## Actions by Type
-
   ![image](images/view-metrics-action.png?raw=true)
