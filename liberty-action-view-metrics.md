@@ -20,14 +20,14 @@ To enable this capability, three things are required:
 
    To expose the 'View Metrics' action in the {k}AppNav action menu for the Deployment kind, the following annotation and label is required: 
 
-```
-kind: Deployment
-metadata: 
-   labels: 
-      kappnav.action.metrics.{mpxx}: true
-      kappnav.action.metrics.{mpxx}: true
-   annotations: 
-      kappnav.subkind: Liberty 
-```
+   ```
+   kind: Deployment
+   metadata: 
+      labels: 
+         kappnav.action.metrics.{mpxx}: true
+         kappnav.action.metrics.{mpxx}: true
+      annotations: 
+         kappnav.subkind: Liberty 
+   ```
 
-Where {mpxx} is either mp11 or mp20 for MicroProfile metrics 1.1 or 2.0, depending on the decisions you made during image prepration, above.
+   Where {mpxx} is either mp11 or mp20 for MicroProfile metrics 1.1 or 2.0, depending on the decisions you made during image prepration, above.
