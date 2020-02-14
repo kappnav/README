@@ -1,4 +1,4 @@
-# # View Kibana Logs Action for [Open Liberty](https://openliberty.io/)
+# View Kibana Logs Action for [Open Liberty](https://openliberty.io/)
 
 Java-based apps built with the Open Liberty framework can send log data to an EFK (Elasticsearch, FluentD, and Kibana) stack with no additional coding required.  
 
