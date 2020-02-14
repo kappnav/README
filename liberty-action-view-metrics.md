@@ -31,3 +31,9 @@ To enable this capability, three things are required:
    ```
 
    Where {mpxx} is either mp11 or mp20 for MicroProfile metrics 1.1 or 2.0, depending on the decisions you made during image prepration, above.
+
+   In the {k}AppNav UI, it appears like this: 
+
+   ## Actions by Type
+
+  ![image](images/view-metrics-action.png?raw=true)
