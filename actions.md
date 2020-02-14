@@ -2,8 +2,16 @@
 
 Kubernetes Application Navigator ({k}AppNav) provides a set of default, context-based actions for Kubernetes resources and some runtimes within the managed containers.
 
-These actions are based on resource kind, optionally qualified by a {k}AppNav concept called "subkind". Subkind is used with the Deployment resource kind, to designate the content type of the images comprising the Deployment, recognizing that the actions supported by Deployment are influenced by the content. For example, a Deployment image implemented in Node.js might support an action to display the Node.js [AppMetrics dashboard](https://github.com/RuntimeTools/appmetrics-dash); or a Deployment image implemented using [Open Liberty](https://openliberty.io/) might support an action to display [mpMetrics-2.0](https://openliberty.io/blog/2018/09/19/get-more-metrics-microprofile20.html) via a [Grafana dashboard](https://developer.ibm.com/tutorials/configure-an-observable-microservice-with-appsody-openshift-open-liberty/#). 
+These actions are based on resource kind, optionally qualified by a {k}AppNav concept called "subkind". Subkind is used with the Deployment and DeploymentConfig resource kinds, to designate the content type of the images comprising the Deployment, recognizing that the actions supported by Deployment are influenced by the content. For example, a Deployment image implemented in Node.js might support an action to display the Node.js [AppMetrics dashboard](https://github.com/RuntimeTools/appmetrics-dash); or a Deployment image implemented using [Open Liberty](https://openliberty.io/) might support an action to display [mpMetrics-2.0](https://openliberty.io/blog/2018/09/19/get-more-metrics-microprofile20.html) via a [Grafana dashboard](https://developer.ibm.com/tutorials/configure-an-observable-microservice-with-appsody-openshift-open-liberty/#). 
 
+Subkind qualification is optional. For out-of-the-box actions it is used with the Deployment and DeploymentConfig kinds to designate what additional actions the Deployment (or DeploymentConfig) support based on content.  The syntax is: 
+
+```
+kind: Deployment
+metadata: 
+   annotations: 
+      kappnav.subkind: Liberty | Nodejs 
+```
 
 ## Actions by Kind[.Subkind] with out-of-the box Actions
 
