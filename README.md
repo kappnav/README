@@ -2,7 +2,7 @@
 
 # What is Kubernetes Application Navigator?
 
-The Kubernetes Application Navigator is a tool that extends the Kubernetes console to provide the visualization, inspection, understanding, and navigation of the deployed resources that comprise an application.
+The Kubernetes Application Navigator is a tool that extends the Kubernetes console to provide visualization, inspection, and navigation of the deployed resources that comprise an application.  It provides high level status and customizable in-context day 2 operations for your applications. 
 
 # What is an Application?
 
