@@ -13,7 +13,7 @@ To enable this capability, two things are required:
 
 1. Deployment Configuration
 
-   To expose the 'View Metrics' action in the {k}AppNav action menu for the Deployment kind, the following annotation is required: 
+   To expose the 'View Kibana Logs' action in the {k}AppNav action menu for the Deployment kind, the following annotation is required: 
 
    ```
    kind: Deployment
