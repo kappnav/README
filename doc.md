@@ -14,4 +14,4 @@ Table of Contents
    1. Defining more complex applications - [composition](https://github.com/kappnav/README/blob/master/how-to-compose-applications.md)
    1. Applications that span namespaces - [spanning](https://github.com/kappnav/README/blob/master/how-to-span-namespaces.md)
 1. Taking Actions against resources - [actions](https://github.com/kappnav/README/blob/master/actions.md)
-1. Customization (coming...)
+1. Implementing [Custom Actions](https://github.com/kappnav/apis/tree/master/tools/actdev#action-developer-tool-actdev)
