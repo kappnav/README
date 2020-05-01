@@ -54,13 +54,12 @@ You can install Kuberenetes Application Navigator by using one of the following 
 
    ```
    # kubectl get pods -n kappnav
-   NAME                                 READY     STATUS      RESTARTS   AGE
-   helm-operator-6bf5fb5b68-hvtbf       1/1       Running     0          2m
-   kappnav-controller-c6bdfdf59-mv2wh   2/2       Running     0          1m
-   kappnav-ui-f5578677f-6r9js           3/3       Running     0          1m
-   kappnav-init-post-49nt8              0/1       Completed   0          1m
-   kappnav-init-pre-7fgcb               0/1       Completed   0          1m
+   NAME                                  READY   STATUS    RESTARTS   AGE
+   kappnav-controller-67c66df5f4-5h5pl   2/2     Running   0          6h32m
+   kappnav-operator-c5c8fddfc-74dl8      1/1     Running   0          6h33m
+   kappnav-ui-96897bddd-z466s            3/3     Running   0          6h32m
    ```
+   
 1. Use the following command to ensure that the routes are created: `kubectl get routes -n kappnav`
    1. Find the kappnav-ui-service route.
    ```
@@ -70,45 +69,7 @@ You can install Kuberenetes Application Navigator by using one of the following 
    ```
    2. Access the kAppNav UI with the following URL: `http://kappnav-ui-service-kappnav.apps.myhost.com/kappnav-ui`
 
-
-## Install the Sample application
-
-1. Clone the sample repository with the following command: `git clone https://github.com/kappnav/samples.git`
-1. Create the `stocktrader` sample namespace with the following command: `kubectl create namespace stocktrader`
-
-   ```
-   # kubectl create namespace stocktrader
-   namespace/stocktrader created
-   ```
-1. Deploy the **stock-trader** sample application with the following command: `kubectl create -f samples/stocktrader -n stocktrader`
-
-   ```
-   # kubectl create -f samples/stocktrader -n stocktrader
-   application.app.k8s.io/stock-trader created
-   deployment.extensions/loyalty-level created
-   service/loyalty-level-service created
-   deployment.extensions/notification-twitter created
-   service/notification-service created
-   deployment.extensions/portfolio created
-   service/portfolio-service created
-   deployment.extensions/stock-quote created
-   service/stock-quote-service created
-   deployment.extensions/trader created
-   service/trader-service created
-   ```
-1. Ensure that the **stock-trader** application starts.
-   * You can watch the application be deployed in the kAppNav UI. The **stock-trader** application appears and the status changes from **Unknown**, to **Problem**, then to **Normal**.
-   * You can also check the installation progress with the following command to see whether all the pods are running:  `kubectl get pods -n stocktrader`
-
-   ```
-   # kubectl get pods -n stocktrader
-   NAME                                  READY     STATUS    RESTARTS   AGE
-   loyalty-level-5fd5c9b855-rfxss        1/1       Running   0          54s
-   notification-twitter-f568cc54-d5xck   1/1       Running   0          54s
-   portfolio-8fb7cf89c-zjw58             1/1       Running   0          54s
-   stock-quote-5c88f57659-tlcl8          1/1       Running   0          53s
-   trader-59c9dcb74-2cv8b                1/1       Running   0          53s
-   ```
+## Install [Stock-Trader Sample](https://github.com/kappnav/samples/blob/master/stocktrader/README.md)
 
 ## Installation validation
 
