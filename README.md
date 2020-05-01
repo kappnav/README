@@ -67,7 +67,11 @@ You can install Kuberenetes Application Navigator by using one of the following 
    NAME                  HOST/PORT                                           PATH          SERVICES             PORT      TERMINATION          WILDCARD
    kappnav-ui-service    kappnav-ui-service-kappnav.apps.myhost.com                        kappnav-ui-service   <all>     reencrypt            None
    ```
-   2. Access the kAppNav UI with the following URL: `http://kappnav-ui-service-kappnav.apps.myhost.com/kappnav-ui`
+   2. Access the kAppNav UI with the following URL: 
+
+   ```
+   http://kappnav-ui-service-kappnav.apps.myhost.com/kappnav-ui
+   ```
 
 ## Install [Stock-Trader Sample](https://github.com/kappnav/samples/blob/master/stocktrader/README.md)
 
