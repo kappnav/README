@@ -24,10 +24,10 @@ The Kubernetes Application Navigator uses the [Application Custom Resource Defin
 
 You can install Kuberenetes Application Navigator by using one of the following methods: 
 
-1. [OKD or minishift into kappnav namespace](https://github.com/kappnav/README#install-on-okd-or-minishift-into-kappnav-namespace)
-1. [OCP v4.2](https://github.com/kappnav/README#install-on-ocp-42)
+1. [OKD or minishift into kappnav namespace](https://github.com/kappnav/README#install-kubernetes-application-navigator-on-okd-or-minishift-into-a-kappnav-namespace)
+1. [OCP v4.2](https://github.com/kappnav/README#install-kubernetes-application-navigator-on-ocp-42)
 1. [minikube](https://github.com/kappnav/README#install-kubernetes-application-navigator-on-minikube) 
-1. [OKD or minishift into user-defined namespace](https://github.com/kappnav/README#install-on-okd-or-minishift-into-user-defined-namespace)
+1. [OKD or minishift into user-defined namespace](https://github.com/kappnav/README#install-kubernetes-application-navigator-on-okd-or-minishift-into-a-user-defined-namespace)
 
 ## Install Kubernetes Application Navigator on OKD or minishift into a kappnav namespace
 
@@ -146,7 +146,7 @@ minikube start --kubernetes-version=1.14.9 --vm-driver=virtualbox --memory=4000m
       ```
 
 
-## Installing Kubernetes Application Navigator on OKD or Minishift into a user-defined namespace
+## Install Kubernetes Application Navigator on OKD or Minishift into a user-defined namespace
   Use the following commands to install Kubernetes Application Navigator on OKD or minishft into a user-defined namespace
    1. `kubectl create namespace my-namespace`
    2. `curl -L https://raw.githubusercontent.com/kappnav/operator/master/releases/latest/kappnav.yaml | sed "s|namespace: kappnav|namespace: my-namespace|" | kubectl create -f - -n my-namespace`
