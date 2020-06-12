@@ -25,7 +25,7 @@ The Kubernetes Application Navigator uses the [Application Custom Resource Defin
 You can install Kuberenetes Application Navigator by using one of the following methods: 
 
 1. [OKD or minishift into kappnav namespace](https://github.com/kappnav/README#install-kubernetes-application-navigator-on-okd-or-minishift-into-a-kappnav-namespace)
-1. [OCP v4.2](https://github.com/kappnav/README#install-kubernetes-application-navigator-on-ocp-42)
+1. [OCP v4](https://github.com/kappnav/README#install-kubernetes-application-navigator-on-ocp-4)
 1. [minikube](https://github.com/kappnav/README#install-kubernetes-application-navigator-on-minikube) 
 1. [OKD or minishift into user-defined namespace](https://github.com/kappnav/README#install-kubernetes-application-navigator-on-okd-or-minishift-into-a-user-defined-namespace)
 
@@ -122,8 +122,8 @@ To add existing applications, or create a new application, follow the instructio
    ```
 
 
-## Install Kubernetes Application Navigator on OCP 4.2
-   Use the following commands to install Kubernetes Application Navigator on OCP 4.2:
+## Install Kubernetes Application Navigator on OCP 4
+   Use the following commands to install Kubernetes Application Navigator on OCP 4:
    1. `kubectl create namespace kappnav`
    1. `curl -L https://raw.githubusercontent.com/kappnav/operator/master/releases/latest/kappnav.yaml | sed "s|kubeEnv: okd|kubeEnv: ocp|" | kubectl create -f - -n kappnav`
 
