@@ -1,3 +1,5 @@
+# The kAppNav project ceased development some time ago.  These repositories will be archived in the near future.
+
 # Documentation [Here](https://github.com/kappnav/README/blob/master/doc.md)
 
 # What is Kubernetes Application Navigator?
